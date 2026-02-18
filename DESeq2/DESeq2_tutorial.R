@@ -100,6 +100,10 @@ sex <- factor(rep(c("Female", "Male"), each = 12))
 geno <- factor(c(rep(c("NR", "Red"), each = 6, times = 2)))
 rep <- factor(c(as.character(c(rep(1:6, each = 1, times = 4) ))))
 
+#If the README is the last element (as in your tail()), just trim to 24:
+samplename <- samplename[1:24]
+files      <- files[1:24]
+
 # Create the sample table
 sampleTable <- data.frame(sampleName = samplename, 
                           fileName = files, 
